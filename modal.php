@@ -1,5 +1,5 @@
 
-  <div class="container">
+<div class="container">
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal1">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -13,14 +13,14 @@
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationTooltip01">Nombres</label>
-                <input type="text" class="form-control" id="validationTooltip01" placeholder="nombres" name="nombres" value="Pepito Pablo" required>
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="nombres" name="nombres" value="" required>
                 <div class="valid-tooltip">
                   Looks good!
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="validationTooltip02">Apellidos</label>
-                <input type="text" class="form-control" id="validationTooltip02" placeholder="apellidos" name="apellidos" value="Canarios Ceballos" required>
+                <input type="text" class="form-control" id="validationTooltip02" placeholder="apellidos" name="apellidos" value="" required>
                 <div class="valid-tooltip">
                   Looks good!
                 </div>

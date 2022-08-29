@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +33,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="index.html">Instituto de Electrónica Aplicada</a>
+      <a class="navbar-brand js-scroll-trigger" href="index.php">Instituto de Electrónica Aplicada</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menú
         <i class="fas fa-bars"></i>
@@ -36,17 +41,21 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="index.html#usuarios">Usuarios</a>
+            <a class="nav-link js-scroll-trigger" href="index.php#usuarios">Usuarios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="asistencia.html">Asistencia</a>
+            <a class="nav-link js-scroll-trigger" href="asistencia.php">Asistencia</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="admin.php">Administración de usuarios</a>
           </li>
+          <li class="nav-item">
+            <a href="logout.php" class="nav-link js-scroll-trigger">Cerrar sesión</a>
+          </li>
         </ul>
       </div>
     </div>
+    <kbd> Logueado como <?php echo $_SESSION['user_name'];?> </kbd>
   </nav>
 
  
@@ -61,7 +70,7 @@
         <!--- insertar --->
       <div class="w-75 p-3 mx-auto text-center">
             <h3 class="text-white mb-5 text-center">Usuarios registrados</h3> 
-              <table class="table table-bordered table-dark table-responsive">
+              <table class="table table-bordered table-dark table-responsive" id="datos">
                 <thead>
                    <tr>
                      <th scope="col">id</th>
@@ -108,6 +117,8 @@
 		                ?>
                     </tbody>
                   </table>
+                 
+
         </div>
   </section>
   
@@ -143,9 +154,12 @@
   integrity="sha1256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous">
 </script>
-<script src="js/jquery-2.2.3.min.js"></script>
-<script src="js/user_log.js"></script>
+
+
 
 </body>
 
 </html>
+<?php }else{
+    header("Location: login.php");
+} ?>

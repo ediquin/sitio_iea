@@ -52,15 +52,16 @@
           
      </section>
      <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2022</div></footer>
-     <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+     <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>     
      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
      <script src="https://code.jquery.com/jquery-3.3.1.js"
-     integrity="sha1256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
      crossorigin="anonymous">
      </script>
      <script type="text/javascript">
 // CommonJS
-     const socket = io('http://143.198.142.84:3000/', {transports:['websocket', 'polling', 'flashsocket']});
+     
+     const socket = io('localhost:3000', {transports:['websocket', 'polling', 'flashsocket']});
      let notificacion = document.getElementById('notificacion');
      socket.on("saludo_socket", function(data){
           notificacion.innerHTML = `<p>Bienvenido al IEA ${data}</p>`;

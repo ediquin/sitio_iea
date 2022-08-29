@@ -31,7 +31,7 @@
             <div class="form-row">
               <div class="col-md-8 mb-3">
                 <label for="validationTooltip03">Correo electrónico</label>
-                <input type="text" class="form-control" id="validationTooltip03" placeholder="<?php echo $row['correo']; ?>" name="correo" required>
+                <input type="text" class="form-control" id="validationTooltip03" placeholder="correo" value="<?php echo $row['correo']; ?>" name="correo" required>
                 <div class="invalid-tooltip">
                   Correo electrónico inválido
                 </div>
@@ -51,7 +51,6 @@
               <label for="formFile" class="form-label">Foto de perfil</label>
               <input class="form-control" accept="image/*" type="file" id="formFile" name="foto">
               </div>
-              <div class="mb-3"><img class="img-thumbnail" width="100px" src="imagen/<?php echo $row['foto'];?>" alt=""></div>
               </div>
             </div>
             <div class="modal-footer">

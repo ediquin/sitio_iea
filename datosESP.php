@@ -37,7 +37,6 @@ if (isset($_POST['FingerID'])) {
         echo "Error con nombre del usuario, por favor vuelva a registrar al usuario";
     }
 }
-
 if (isset($_POST['Get_Fingerid'])) {
     
         if ($_POST['Get_Fingerid'] == "get_id") {
@@ -56,7 +55,6 @@ if (isset($_POST['Get_Fingerid'])) {
             exit();
         }
 }
-
 if (!empty($_POST['confirm_id'])) {
     
         $fingerid = $_POST['confirm_id'];
@@ -91,6 +89,13 @@ if (isset($_POST['DeleteID'])) {
     }else{
         exit();
     }
+}
+if (isset($_POST['FingerID_t'])){
+    $fingerID = $_POST['FingerID_t'];
+    $temp = $_POST['temp'];
+    $sql="UPDATE log_usuarios SET temperatura=? WHERE id_huella=? AND fecha=CURDATE() AND temperatura = 0;";
+    $query = $pdo->prepare($sql);
+    $query->execute([$temp, $fingerID]);
 }
 
 ?>
