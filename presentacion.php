@@ -61,7 +61,7 @@
      <script type="text/javascript">
 // CommonJS
      
-     const socket = io('localhost:3000', {transports:['websocket', 'polling', 'flashsocket']});
+     const socket = io('http://144.126.212.162:3000/', {transports:['websocket', 'polling', 'flashsocket']});
      let notificacion = document.getElementById('notificacion');
      socket.on("saludo_socket", function(data){
           notificacion.innerHTML = `<p>Bienvenido al IEA ${data}</p>`;

@@ -24,8 +24,8 @@
     $datos=$query->fetchAll();
 
     $tabla=
-    '<table class="table table-responsive row d-flex justify-content-center" cellpadding="3" cellspacing="5" border="0">
-    <thead class="project-section text-center text-white my-0 text-uppercase">
+    '<table class="table table-responsive table-bordered table-dark ">
+    <thead class="text-uppercase">
                     <TR>
                     <TD>ID</TD>
                     <TD>Usuario</TD>
@@ -37,7 +37,7 @@
                     <TD>Temperatura</TD>
                     </TR>
     </thead>
-    <tbody class="text-white mb-4">';
+    <tbody class="">';
   $datosTabla = "";
 
   foreach($datos as $key => $value){

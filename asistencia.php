@@ -126,12 +126,12 @@ if(isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
           
         </form>
       </div>
+      <div class="tbl-header slideInRight animated d-flex justify-content-center">
 
-    <div class="tbl-header slideInRight animated">
-      <br>
-      <div  id="userslog"></div>
+      <div id="userslog"></div>
       <br> <br> <br> <br> <br> <br> <br>
     </div>
+    
   </section>
 
 

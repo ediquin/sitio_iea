@@ -36,7 +36,8 @@
     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
   </div>
   
-  <button type="submit" class="btn btn-primary">Enviar</button>
+  <button type="submit" class="btn btn-primary align-content-center">Enviar</button> <br><br>
+  <a role="button" href="presentacion.php" class="btn btn-success">Ir al modo de presentación</a>
 </form>
     </div>
 </body>
