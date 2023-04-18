@@ -15,7 +15,7 @@ if (isset($_POST['FingerID'])) {
         $apellido = $row->apellidos;
         $Uname = strtok($nombre, " ");
         $puesto = $row->puesto;
-        $sql = "SELECT * FROM log_usuarios WHERE id_huella=? AND fecha=CURDATE() AND hora_salida=''";
+        $sql = "SELECT * FROM log_usuarios WHERE id_huella=? AND fecha=CURDATE() AND hora_salida='00:00:00'";
         $query = $pdo->prepare($sql);
         $query->execute([$fingerID]);
         $row = $query->fetch(PDO::FETCH_OBJ);
